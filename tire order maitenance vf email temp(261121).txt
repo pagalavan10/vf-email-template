@@ -1,0 +1,155 @@
+<messaging:emailTemplate subject="Tire Order For Maintance" recipientType="User" relatedToType="Maintenance__c">
+<messaging:htmlEmailBody >
+  Hello ,<br/><br/>
+ 
+Please could you send us the following:<br/>
+<br/>
+<STYLE type="text/css">
+              
+        table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 40%;
+  table-layout: fixed;
+}
+
+table caption {
+  font-size: 1em;
+  margin: .5em 0 .75em;
+}
+
+table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: .30em;
+}
+
+table th,
+table td {
+  padding: .615em;
+  text-align: center;
+}
+
+table th {
+  font-size: .85em;
+  background-color: #57bbd4;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+  
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+  
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+  
+  table td::before {
+
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.25;
+}
+      
+     </STYLE>
+     <font face="arial" size="2">
+     
+     <table border="1">
+     
+     
+      <tr > 
+        <th>Tire Size</th>
+        <th>Quantity to Order</th>
+      </tr> 
+     
+     <tr style="display:{!if(!isblank(relatedto.Quantity_to_Order_295_75R22_5_Drive__c),'','none')}">
+        <td>295/75R22.5 Drive</td>
+        <td>{!relatedto.Quantity_to_Order_295_75R22_5_Drive__c}</td>
+     </tr>
+          
+     <tr style="display:{!if(!isblank(relatedto.Quantity_to_Order_11R22_5_Drive__c),'','none')}">
+        <td>11R22.5 Drive</td>
+        <td>{!relatedto.Quantity_to_Order_11R22_5_Drive__c}</td>
+     </tr>
+         
+     <tr style="display:{!if(!isblank(relatedto.Quantity_to_Order_11R24_5_Drive__c),'','none')}">
+        <td>11R24.5 Drive</td>
+        <td>{!relatedto.Quantity_to_Order_11R24_5_Drive__c}</td>
+     </tr>
+     
+     <tr style="display:{!if(!isblank(relatedto.Quantity_to_Order_12R22_5_Drive__c),'','none')}">
+        <td>12R22.5 Drive</td>
+        <td>{!relatedto.Quantity_to_Order_12R22_5_Drive__c}</td>
+     </tr>
+     
+     <tr style="display:{!if(!isblank(relatedto.Quantity_to_Order_295_75R22_5_Steer__c),'','none')}">
+        <td>295/75R22.5 Steer</td>
+        <td>{!relatedto.Quantity_to_Order_295_75R22_5_Steer__c}</td>
+     </tr>
+     
+     <tr style="display:{!if(!isblank(relatedto.Quantity_to_Order_315_80R22_5_Steer__c),'','none')}">
+        <td>315/80R22.5 Steer</td>
+        <td>{!relatedto.Quantity_to_Order_315_80R22_5_Steer__c}</td>
+     </tr>
+     
+     <tr style="display:{!if(!isblank(relatedto.Quantity_to_Order_425_65R22_5_Steer__c),'','none')}">
+        <td>425/65R22.5 Steer</td>
+        <td>{!relatedto.Quantity_to_Order_425_65R22_5_Steer__c}</td>
+     </tr>
+     
+     <tr style="display:{!if(!isblank(relatedto.Quantity_to_Order_ST235_85R16_Drive__c),'','none')}">
+        <td>ST235/85R16 Drive</td>
+        <td>{!relatedto.Quantity_to_Order_ST235_85R16_Drive__c}</td>
+     </tr>
+   
+ </table>
+ 
+<br></br>
+
+
+Thank you,
+         <br></br>
+         </font> 
+Haulbrooke Operations
+
+</messaging:htmlEmailBody>
+</messaging:emailTemplate>
